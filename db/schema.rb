@@ -19,6 +19,10 @@ ActiveRecord::Schema.define(version: 2021_07_02_102548) do
     t.string "name"
     t.string "email"
     t.string "password_digest"
+    
+  create_table "blogs", force: :cascade do |t|
+    t.string "title"
+    t.text "content"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
